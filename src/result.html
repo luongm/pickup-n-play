@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="closure-library/closure/goog/base.js"></script>
+    <script src="controller.js"></script>
+  </head>
+  <body onload="onLoad()" style="background: url(http://i47.tinypic.com/221d81.png)">
+    <div id="homepage" class="page">
+      <!--TOP BAR HTML-->
+      <div id="topBar" class="wrapper">
+        <div id="logo" class="logo">
+          <!-- <img src="http://i49.tinypic.com/kf12sp.png" class="logoImage"></img> -->
+          <img src="images/logo_image_white.png" class="logoImage"></img>
+        </div>
+        <div id="gameSearchBox" class="gameSearchBox">
+          <label for="gameSearch" style="font-family: fantasy">Search for Sport:</label>
+          <input type="text" id="gameSearch" class="gameSearchInputBox">
+        </div>
+        <div id="locationSearchBox" class="locationSearchBox">
+          <label for="locationSearch" style="font-family: fantasy">Near:</label>
+          <input type="text" id="locationSearch" class="locationSearchInputBox">
+        </div>
+        <button class="searchButton searchButtonClick" onclick="search()"></button>
+      </div>
+
+      <!--SIDEBAR HTML-->
+      <div id="sidebarContentWrapper" class="sidebarContent">
+        <div id="homeIconContainer" class="sidebarIconContainer">
+          <a href="homepage.html">
+            <img src="http://i48.tinypic.com/rutx52.png" class="homeIcon"></img>
+          </a>
+          <div id="homeLabel" class="homeIconLabel">Home</div>
+        </div>
+        <div id="profileIconContainer" class="sidebarIconContainer">
+          <a href="profile.html">
+            <img src="http://i50.tinypic.com/qssa5e.png" class="profileIcon"></img>
+          </a>
+          <div id="profileLabel" class="profileIconLabel">My Profile</div>
+        </div>
+        <div id="createIconContainer" class="sidebarIconContainer">
+          <a href="createagame.html">
+            <img src="http://i45.tinypic.com/2vw63yw.png" class="createIcon"></img>
+          </a>
+          <div id="createLabel" class="createIconLabel">Create a Game</div>
+        </div>
+        <div id="advancedSearchIconContainer" class="sidebarIconContainer">
+          <a href="advancedsearch.html">
+            <img src="http://i45.tinypic.com/4k7e6o.png" class="advancedSearchIcon"></img>
+          </a>
+          <div id="advancedSearchLabel" class="advancedSearchIconLabel">Advanced Search</div>
+        </div>
+        <div id="myGamesIconContainer" class="sidebarIconContainer">
+          <a href="mygames.html">
+            <img src="http://i45.tinypic.com/2zthmxu.jpg" class="myGamesIcon"></img>
+          </a>
+          <div id="myGamesLabel" class="myGamesIconLabel">My Games</div>
+        </div>
+        <div id="myFavoritesIconContainer" class="sidebarIconContainer">
+          <a href="myfavorites.html">
+            <img src="http://i45.tinypic.com/33f87ps.png" class="myFavoritesIcon"></img>
+          </a>
+          <div id="myFavoritesLabel" class="myFavoritesIconLabel">My Favorites</div>
+        </div>
+        <div id="helpIconContainer" class="sidebarIconContainer">
+          <a href="help.html">
+            <img src="http://i46.tinypic.com/978zr4.png" class="helpIcon"></img>
+          </a>
+          <div id="helpLabel" class="helpIconLabel">Help</div>
+        </div>
+        <div id="logoutIconContainer" class="sidebarIconContainer">
+          <a href="logout.html">
+            <img src="http://i47.tinypic.com/k4tava.png" class="logoutIcon"></img>
+          </a>
+          <div id="logoutLabel" class="logoutIconLabel">Logout</div>
+        </div>
+      </div>
+
+      <!-- Arrow to indicate what has been selected on the sidebar. -->
+      <div id="sidebarIndicatorArrow" class="sidebarSelectedArrowHome"></div>
+
+      <!--MAIN CONTENT HTML-->
+      <div id="mainContentWrapper" class="mainContentWrapper">
+				<div id="filterBar" class="filterBar"> <!-- TODO need to show this bar -->
+					<div style="position: relative; bottom: 19px; left: 4px; display: inline-block"><h4>Filtered By (Click to Remove):</h4></div>
+					<div class="filter">Skill: 3+ star</div>
+				</div>
+        <h2>Here's your filtered result</h2>
+        
+        <!-- Game Post #3 -->
+        <div class="gamePost">
+          <div class="gamePost_header">
+            <div class="gamePost_user">
+              <div class="gamePost_user_pic"></div>
+              <div class="gamePost_user_name">
+                <p>Minh Luong</p>
+              </div>
+            </div>
+            <div class="gamePost_messageBubble">
+              <p>Join Me!</p>
+            </div>
+            <div class="gamePost_details">
+              <p>Details</p>
+            </div>
+          </div>
+          
+          <div class="gamePost_content">
+            <div class="gamePost_sportPic">
+              <img src="images/tennis_court.jpeg">
+            </div>
+            <div class="gamePost_info">
+              <div class="gamePost_sportName">Tennis</div>
+              <div id="gamePostLocation3" class="gamePost_location">@ Hearst Parking Structure</div>
+              <div class="gamePost_time">5:00 - 7:00 pm</div>
+              <div class="gamePost_socialInfo">11 likes | 25 comments</div>
+            </div>
+          </div>
+          
+          <div class="gamePost_bottomBar">
+            <div class="gamePost_postedTime">
+              Posted 36 minutes ago
+            </div>
+            <div class="gamePost_actions">
+              <text onclick="alert('Liking...')">Like</text> |
+              <text onclick="alert('Commenting...')">Comment</text> |
+              <text onclick="alert('Sharing...')">Share</text>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
