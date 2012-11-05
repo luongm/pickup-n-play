@@ -78,9 +78,80 @@
       <div id="sidebarIndicatorArrow" class="sidebarSelectedArrowHome"></div>
 
       <!--MAIN CONTENT HTML-->
-      <div id="mainContentWrapper" class="mainContentWrapper">
-        <div id="gamePost1" class="gamePost">
-
+      <div class="mainContentWrapper">
+        <div class="advancedSearchForm">
+          <h1>Advanced search</h1>
+          
+          <div class="advancedSearchForm_content">
+            <p>
+              <div class="advancedSearch_left">I want to play</div>
+              <select name="sport-name" id="sport-name" class="advancedSearch_right">
+                <option value="Tennis"    >Tennis</option>
+                <option value="Basketball">Basketball</option>
+                <option value="Soccer"    >Soccer</option>
+                <option value="Badminton" >Badminton</option>
+                <option value="Football"  >Football</option>
+              </select>
+            </p><br>
+        
+            <p>
+              <div class="advancedSearch_left">Time</div>
+              <input id="start-time" class="advancedSearch_right" type="text" placeholder="30 minutes from now">
+            </p><br>
+        
+            <p>
+              <div class="advancedSearch_left">Duration</div>
+              <input id="duration" class="advancedSearch_right" type="text" placeholder="2 hours">
+            </p><br>
+        
+            <p>
+              <div class="advancedSearch_left">Location</div>
+              <input id="location" class="advancedSearch_right" type="text" placeholder="Maxwell Fields">
+            </p><br>
+        
+            <p>
+              <div class="advancedSearch_left">Skill level</div>
+              <select name="skill-level" id="skill-level" class="advancedSearch_right">
+                <option value="0">Any stars</option>
+                <option value="1">1+ stars </option>
+                <option value="2">2+ stars </option>
+                <option value="3">3+ stars </option>
+                <option value="4">4+ stars </option>
+                <option value="5">5+ stars </option>
+              </select>
+            </p><br>
+        
+            <p>
+              <div class="advancedSearch_left">Intensity level</div>
+              <select name="skill-level" id="skill-level" class="advancedSearch_right">
+                <option value="0">Any</option>
+                <option value="1">Very Little</option>
+                <option value="2">Little</option>
+                <option value="3">Moderate</option>
+                <option value="4">Intense</option>
+                <option value="5">Very Intense</option>
+              </select>
+            </p><br>
+        
+            <p>
+              <div class="advancedSearch_left">Type of Rules</div>
+              <select name="rule-type" id="rule-type" class="advancedSearch_right">
+                <option value="any">Any</option>
+                <option value="french">French Open</option>
+                <option value="australian">Australian Open</option>
+                <option value="us">US Open</option>
+                <option value="wimbledon">Wimbledon Open</option>
+                <option value="world tour">World Tour</option>
+              </select>
+            </p><br>
+        
+            <p>
+              <div class="advancedSearch_left">Including people</div>
+              <textarea class="advancedSearch_right" rows="4" cols="25" placeholder="Sumedh Sawant"></textarea>
+            </p><br>
+            
+            <button onclick="window.open('result.html', '_self');">Search</button>
+          </div>
         </div>
       </div>
     </div>
