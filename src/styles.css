@@ -1,0 +1,602 @@
+#indexContent {
+	width: 35em;
+	padding-top: 12em;
+	padding-left: 15px;
+	padding-right: 15px;
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+.wrapper {
+	min-width: 1230px;
+	height: 60px;
+	background: #3F729B;
+	-webkit-border-radius: 11px;
+	position: relative;
+	display: block;
+	font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.logo {
+	top: 13px;
+	margin-left: -10px;
+	background-position: 0 -96px;
+	height: 35px;
+	width: 97px;
+	position: absolute;
+}
+
+.logoImage {
+	height: 38;
+	left: 20px;
+	position: absolute;
+	bottom: 0px;
+}
+
+.gameSearchBox {
+	position: relative;
+	left: 350px;
+	top: 15px;
+	display: inline-block;
+	-webkit-border-radius: 11px;
+}
+
+.locationSearchBox {
+	position: relative;
+	left: 400px;
+	top: 15px;
+	display: inline-block;
+	-webkit-border-radius: 11px;
+}
+
+.searchButton {
+	left: 880px;
+	top: 8px;
+	background: url(http://i50.tinypic.com/33tqn8h.png);
+	border: 1px solid #3F729B;
+	position: absolute;
+	height: 42px;
+	width: 94px
+}
+
+.searchButtonClick:active {
+	left: 855px;
+	top: 13px;
+}
+
+.filterBar {
+	top: 5px;
+	height: 40px;
+	background: url(http://i47.tinypic.com/221d81.png);
+	-webkit-border-radius: 11px;
+	position: relative;
+}
+
+.filter {
+	height: 20px;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	bottom: 19px;
+	margin-left: 2px;
+	padding: 0 2 0 2;
+	background: orange;
+	-webkit-border-radius: 11px;
+}
+
+.filter:hover {
+	background: #D16705;
+}
+
+.homeIcon {
+	height: 70px;
+	width: 70px;
+	left: 40px;
+	top: 79px;
+	position: absolute;
+	-webkit-border-radius: 11px;
+}
+
+.sidebarIconContainer {
+
+}
+
+.homeIconLabel {
+	position: absolute;
+	display: inline-block;
+	font-family: fantasy;
+	top: 147px;
+	left: 54px;
+}
+
+.profileIcon {
+	height: 70px;
+	width: 70px;
+	left: 40px;
+	top: 189px;
+	position: absolute;
+	-webkit-border-radius: 11px;
+}
+
+.profileIconLabel {
+	position: absolute;
+	display: inline-block;
+	font-family: fantasy;
+	top: 262px;
+	left: 37px;
+}
+
+.createIcon {
+	height: 70px;
+	width: 70px;
+	left: 40px;
+	top: 299px;
+	position: absolute;
+	-webkit-border-radius: 11px;
+}
+
+.createIconLabel {
+	position: absolute;
+	display: inline-block;
+	font-family: fantasy;
+	top: 370px;
+	left: 21px;
+}
+
+.advancedSearchIcon {
+	height: 70px;
+	width: 70px;
+	left: 40px;
+	top: 409px;
+	position: absolute;
+	-webkit-border-radius: 11px;
+}
+
+.advancedSearchIconLabel {
+	position: absolute;
+	display: inline-block;
+	font-family: fantasy;
+	top: 482px;
+	left: 10px;
+}
+
+.myGamesIcon {
+	height: 70px;
+	width: 70px;
+	left: 40px;
+	top: 519px;
+	position: absolute;
+	-webkit-border-radius: 11px;	
+}
+
+.myGamesIconLabel {
+	position: absolute;
+	display: inline-block;
+	font-family: fantasy;
+	top: 590px;
+	left: 37px;
+}
+
+.myFavoritesIcon {
+	height: 70px;
+	width: 70px;
+	left: 40px;
+	top: 629px;
+	position: absolute;
+	-webkit-border-radius: 11px;	
+}
+
+.myFavoritesIconLabel {
+	position: absolute;
+	display: inline-block;
+	font-family: fantasy;
+	top: 700px;
+	left: 26px;
+}
+
+.helpIcon {
+	height: 70px;
+	width: 70px;
+	left: 40px;
+	top: 739px;
+	position: absolute;
+	-webkit-border-radius: 11px;
+}
+
+.helpIconLabel {
+	position: absolute;
+	display: inline-block;
+	font-family: fantasy;
+	top: 811px;
+	left: 58px;
+}
+
+.logoutIcon {
+	height: 70px;
+	width: 70px;
+	left: 40px;
+	top: 849px;
+	position: absolute;
+	-webkit-border-radius: 11px;
+}
+
+.logoutIconLabel {
+	position: absolute;
+	display: inline-block;
+	font-family: fantasy;
+	top: 920px;
+	left: 48px;
+}
+
+.sidebarSelectedArrowHome {
+	width: 0px;
+	height: 0px;
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	border-right: 25px solid white;
+	position: absolute;
+	top: 92px;
+	left: 130px;
+}
+
+.sidebarSelectedArrowProfile {
+	width: 0px;
+	height: 0px;
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	border-right: 25px solid white;
+	position: absolute;
+	top: 199px;
+	left: 130px;
+}
+
+.sidebarSelectedArrowCreateAGame {
+	width: 0px;
+	height: 0px;
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	border-right: 25px solid white;
+	position: absolute;
+	top: 308px;
+	left: 130px;
+}
+
+.sidebarSelectedArrowAdvancedSearch {
+	width: 0px;
+	height: 0px;
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	border-right: 25px solid white;
+	position: absolute;
+	top: 418px;
+	left: 130px;
+}
+
+.sidebarSelectedArrowMyGames {
+	width: 0px;
+	height: 0px;
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	border-right: 25px solid white;
+	position: absolute;
+	top: 529px;
+	left: 130px;
+}
+
+.sidebarSelectedArrowMyFavorites {
+	width: 0px;
+	height: 0px;
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	border-right: 25px solid white;
+	position: absolute;
+	top: 638px;
+	left: 130px;
+}
+
+.sidebarSelectedArrowHelp {
+	width: 0px;
+	height: 0px;
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	border-right: 25px solid white;
+	position: absolute;
+	top: 747px;
+	left: 130px;
+}
+
+.sidebarSelectedArrowLogout {
+	width: 0px;
+	height: 0px;
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	border-right: 25px solid white;
+	position: absolute;
+	top: 856px;
+	left: 130px;
+}
+
+.mainContentWrapper {
+	position: absolute;
+	-webkit-border-radius: 11px;
+	width: 1037px;
+	left: 155px;
+	height: 1300px;
+	margin-top: 8px;
+	background: white;
+	padding: 0 2em;
+}
+
+.gamePost {
+	position: relative;
+	width: 900px;
+	height: 400px;
+	margin: -10px;
+	background-image: url('images/game_post.png');
+	background-size: 900px 400px;
+	background-repeat: no-repeat;
+}
+
+/* First part of a game post */
+.gamePost_header {
+	display: block;
+	position: absolute;
+	width: 900px;
+	height: 85px;
+}
+
+.gamePost_user {
+	position: relative;
+	float: left;
+	border: solid black 3px;
+	width: 300px;
+	height: 50px;
+	margin: 25px;
+	background-color: #FAFF97;
+}
+.gamePost_user:hover {
+	background-color: #FFE500;
+}
+
+.gamePost_user_pic {
+	position: relative;
+	float: left;
+	width: 40px;
+	height: 40px;
+	margin: 6px;
+	background-image: url('images/default_guy.png');
+	background-size: 40px;
+}
+.gamePost_user_name p {
+	position: relative;
+	margin: 10px;
+	font-size: 30px;
+}
+
+.gamePost_messageBubble {
+	position: relative;
+	width: 200px;
+	height: 50px;
+	float: left;
+	margin-top: 30px;
+	margin-left: -20px;
+	background-image: url('images/message_bubble.png');
+	background-size: 200px 50px;
+}
+.gamePost_messageBubble:hover {
+	background-image: url('images/message_bubble_hovered.png');
+}
+.gamePost_messageBubble p {
+	position: relative;
+	width: 200px;
+	font-size: 25px;
+	margin: 0;
+	text-align: center;
+	padding-top: 5%;
+}
+
+.gamePost_details {
+	position: relative;
+	float: right;
+	border: solid black 3px;
+	width: 120px;
+	height: 50px;
+	margin-right: 67px;
+	margin-top: 25px;
+	background-color: #62F83F;
+}
+.gamePost_details:hover {
+	background-color: #51CD29;
+}
+.gamePost_details p {
+	position: relative;
+	font-size: 30px;
+	margin: 7px 15px;
+}
+
+/* Second part of a game post */
+.gamePost_content {
+	display: block;
+	position: absolute;
+	top: 85px;
+	width: 900px;
+	height: 240px;
+	float: left;
+}
+
+.gamePost_sportPic {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500px;
+	height: 230px;
+	margin: 0 20px;
+}
+.gamePost_sportPic img {
+	width: 500px;
+	height: 230px;
+}
+
+.gamePost_info {
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 530px;
+	width: 330px;
+	height: 230px;
+}
+.gamePost_info div {
+	font-size: 30px;
+	width: 330px;
+}
+.gamePost_socialInfo {
+	position: absolute;
+	top: 180px;
+}
+
+/* Last part of a game post */
+.gamePost_bottomBar {
+	display: block;
+	position: absolute;
+	top: 325px;
+	width: 900px;
+	height: 50px;
+}
+.gamePost_bottomBar > * {
+	font-size: 20px;
+	height: 50px;
+	margin-top: 10px;
+}
+
+.gamePost_postedTime {
+	position: relative;
+	float: left;
+	width: 300px;
+	padding-left: 50px;
+}
+.gamePost_actions {
+	position: relative;
+	float: right;
+	text-align: right;
+	width: 300px;
+	padding-right: 80px;
+}
+
+
+/**
+ *  Profile Page View
+ */
+.profileViewer {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	width: 700px;
+	height: 600px;
+	padding: 50px;
+	border: solid black 1px;
+	border-radius: 30px;
+}
+.profile_picture {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+}
+.profile_name {
+	position: absolute;
+	top: 320px;
+	font-size: 50px;
+	font: italic normal bold 50px "Times New Roman", serif;
+}
+
+.profile_performanceRecord {
+	position: absolute;
+	left: 400px;
+	border: solid black 1px;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: yellow;
+}
+.profile_performanceRecord h2 {
+	margin: 0px auto;
+	text-align: center;
+}
+.profile_performanceTableHolder {
+	overflow: auto;
+	height: 300px;
+	width: 350px;
+	background-color: white;
+}
+.profile_performanceTable {}
+.profile_performanceTableCell {
+	position: relative;
+	width: 290px;
+	height: 100px;
+	padding: 15px 15px 15px 15px;
+}
+.profile_performanceTableCell_left {
+	position: relative;
+	width: 120px;
+	float: left;
+}
+.profile_performanceTableCell_right {
+	position: relative;
+	width: 160px;
+	padding-left: 10px;
+	float: right;
+	text-align: center;
+}
+.profile_performanceTableCell_sportPic img {
+	width: 120px;
+	height: 100px;
+}
+.profile_performanceTableCell_stars img {
+	width: 160px;
+	height: 40px;
+	padding-bottom: 15px;
+}
+.profile_performanceTableCell_challenge {
+	width: 160px;
+	height: 30px;
+	border: solid black 1px;
+	margin: auto;
+	background-color: yellow;
+	color: red;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.profile_social {
+	position: absolute;
+	top: 420px;
+}
+.profile_social > * {
+	position: relative;
+	float: left;
+	border: solid black 1px;
+	border-radius: 10px;
+	font-size: 30px;
+	width: 350px;
+	height: 85px;
+	margin: 10px 20px 10px -5px;
+}
+.profile_social img {
+	position: relative;
+	float: left;
+	width: 80px;
+	height: 80px;
+	padding: 3px;
+}
+.profile_social p {
+	position: absolute;
+	left: 100px;
+	height: 20px;
+	margin-top: 5px;
+}
+.profile_addToFavorite p{
+	margin-top: 25px;
+}
+.profile_addToFavorite:hover {
+	background-color: #B7EDEA;
+}
