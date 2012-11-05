@@ -16,9 +16,12 @@ posts = {
 var hiddenGamePosts = [];
 var filterTabs = [];
 var activeFilters = [];
+var favorites = [];
 
 function onLoad() {
-	document.getElementById('filterBar').style.display = "none";
+	if (document.getElementById('filterBar')) {
+		document.getElementById('filterBar').style.display = "none";
+	}
 }
 
 function createGamePost(parent, postId) {
@@ -120,4 +123,31 @@ function handleFilterTabClick(e) {
 	if (activeFilters.length == 0) {
 		document.getElementById('filterBar').style.display = "none";
 	}
+}
+
+function walterProfileOnLoad() {
+	var element = document.getElementById('addToFavorites');
+	goog.events.listen(element, goog.events.EventType.CLICK, this.handleWalterAddToFavorites, this);
+}
+
+function handleWalterAddToFavorites(e) {
+	favorites.push("Walter White");
+}
+
+function sumedhProfileOnLoad() {
+	var element = document.getElementById('addToFavorites');
+	goog.events.listen(element, goog.events.EventType.CLICK, this.handleSumedhAddToFavorites, this);
+}
+
+function handleSumedhAddToFavorites(e) {
+	favorites.push("Sumedh Sawant");
+}
+
+function minhProfileOnLoad() {
+	var element = document.getElementById('addToFavorites');
+	goog.events.listen(element, goog.events.EventType.CLICK, this.handleMinhAddToFavorites, this);
+}
+
+function handleMinhAddToFavorites(e) {
+	favorites.push("Minh Luong");
 }
