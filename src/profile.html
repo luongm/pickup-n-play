@@ -1,0 +1,189 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="closure-library/closure/goog/base.js"></script>
+    <script src="controller.js"></script>
+  </head>
+  <body onload="onLoad()" style="background: url(http://i47.tinypic.com/221d81.png)">
+    <div id="homepage" class="page">
+      <!--TOP BAR HTML-->
+      <div id="topBar" class="wrapper">
+        <div id="logo" class="logo">
+          <img src="http://i49.tinypic.com/kf12sp.png" class="logoImage"></img>
+        </div>
+        <div id="gameSearchBox" class="gameSearchBox">
+          <label for="gameSearch" style="font-family: fantasy">Search for:</label>
+          <input type="text" id="gameSearch" class="gameSearchInputBox">
+        </div>
+        <div id="locationSearchBox" class="locationSearchBox">
+          <label for="locationSearch" style="font-family: fantasy">Near:</label>
+          <input type="text" id="locationSearch" class="locationSearchInputBox">
+        </div>
+        <button class="searchButton" onclick="alert('Shit still needs to be made!');"></button>
+      </div>
+
+      <!--SIDEBAR HTML-->
+      <div id="sidebarContentWrapper" class="sidebarContent">
+        <div id="homeIconContainer" class="sidebarIconContainer">
+          <a href="homepage.html">
+            <img src="http://i48.tinypic.com/rutx52.png" class="homeIcon"></img>
+          </a>
+          <div id="homeLabel" class="homeIconLabel">Home</div>
+        </div>
+        <div id="profileIconContainer" class="sidebarIconContainer">
+          <a href="profile.html">
+            <img src="http://i50.tinypic.com/qssa5e.png" class="profileIcon"></img>
+          </a>
+          <div id="profileLabel" class="profileIconLabel">My Profile</div>
+        </div>
+        <div id="createIconContainer" class="sidebarIconContainer">
+          <a href="createagame.html">
+            <img src="http://i45.tinypic.com/2vw63yw.png" class="createIcon"></img>
+          </a>
+          <div id="createLabel" class="createIconLabel">Create a Game</div>
+        </div>
+        <div id="advancedSearchIconContainer" class="sidebarIconContainer">
+          <a href="advancedsearch.html">
+            <img src="http://i45.tinypic.com/4k7e6o.png" class="advancedSearchIcon"></img>
+          </a>
+          <div id="advancedSearchLabel" class="advancedSearchIconLabel">Advanced Search</div>
+        </div>
+        <div id="myGamesIconContainer" class="sidebarIconContainer">
+          <a href="mygames.html">
+            <img src="http://i45.tinypic.com/2zthmxu.jpg" class="myGamesIcon"></img>
+          </a>
+          <div id="myGamesLabel" class="myGamesIconLabel">My Games</div>
+        </div>
+        <div id="myFavoritesIconContainer" class="sidebarIconContainer">
+          <a href="myfavorites.html">
+            <img src="http://i45.tinypic.com/33f87ps.png" class="myFavoritesIcon"></img>
+          </a>
+          <div id="myFavoritesLabel" class="myFavoritesIconLabel">My Favorites</div>
+        </div>
+        <div id="helpIconContainer" class="sidebarIconContainer">
+          <a href="help.html">
+            <img src="http://i46.tinypic.com/978zr4.png" class="helpIcon"></img>
+          </a>
+          <div id="helpLabel" class="helpIconLabel">Help</div>
+        </div>
+        <div id="logoutIconContainer" class="sidebarIconContainer">
+          <a href="logout.html">
+            <img src="http://i47.tinypic.com/k4tava.png" class="logoutIcon"></img>
+          </a>
+          <div id="logoutLabel" class="logoutIconLabel">Logout</div>
+        </div>
+      </div>
+
+      <!-- Arrow to indicate what has been selected on the sidebar. -->
+      <div id="sidebarIndicatorArrow" class="sidebarSelectedArrowHome"></div>
+
+      <!--MAIN CONTENT HTML-->
+      <div class="mainContentWrapper">
+        <div class="profileViewer">
+          <div class="profile_picture">
+            <img src="images/default_guy.png">
+          </div>
+          <div class="profile_name">Minh Luong</div>
+          <div class="profile_performanceRecord">
+            <h2>Performance Record</h2>
+            <div class="profile_performanceTableHolder">
+              <div class="profile_performanceTable">
+                <table border="1">
+                  <tr>
+                    <td>
+                      <div class="profile_performanceTableCell">
+                        <div class="profile_performanceTableCell_left">
+                          <div class="profile_performanceTableCell_sportPic">
+                            <img src="images/badminton_birdie.jpg">
+                          </div>
+                        </div>
+                        <div class="profile_performanceTableCell_right">
+                          <div class="profile_performanceTableCell_stars">
+                            <img src="images/4_stars.png">
+                          </div>
+                          <div class="profile_performanceTableCell_gameCount">Games played: 14</div>
+                          <div class="profile_performanceTableCell_challenge">Challenge</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="profile_performanceTableCell">
+                        <div class="profile_performanceTableCell_left">
+                          <div class="profile_performanceTableCell_sportPic">
+                            <img src="images/tennis_ball.png">
+                          </div>
+                        </div>
+                        <div class="profile_performanceTableCell_right">
+                          <div class="profile_performanceTableCell_stars">
+                            <img src="images/3_stars.png">
+                          </div>
+                          <div class="profile_performanceTableCell_gameCount">Games played: 9</div>
+                          <div class="profile_performanceTableCell_challenge">Challenge</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="profile_performanceTableCell">
+                        <div class="profile_performanceTableCell_left">
+                          <div class="profile_performanceTableCell_sportPic">
+                            <img src="images/basketball_ball.gif">
+                          </div>
+                        </div>
+                        <div class="profile_performanceTableCell_right">
+                          <div class="profile_performanceTableCell_stars">
+                            <img src="images/1_star.png">
+                          </div>
+                          <div class="profile_performanceTableCell_gameCount">Games played: 2</div>
+                          <div class="profile_performanceTableCell_challenge">Challenge</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="profile_social">
+            <div class="profile_viewFacebook">
+              <div class="profile_facebook_icon">
+                <img src="images/facebook_logo.png">
+              </div>
+              <div class="profile_facebook_text">
+                <p>View my Facebook profile</p>
+              </div>
+            </div>
+            <div class="profile_addToFavorite">
+              <div class="profile_addToFavorite_icon">
+                <img src="images/star_favorite.gif">
+              </div>
+              <div class="profile_addToFavorite_text">
+                <p>Add me to favorite!</p>
+              </div>
+            </div>
+            <div class="profile_viewTwitter">
+              <div class="profile_twitter_icon">
+                <img src="images/follow_twitter.jpeg">
+              </div>
+              <div class="profile_twitter_text">
+                <p>Follow me on Twitter</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript">
+    // Use jquery for now. Can change to closure later
+  	$(".profile_addToFavorite").click(function() {
+      $(this).find(".profile_addToFavorite_text p").html("Favorited!!!");
+      $(this).css('background-color', '#B7EDEA');
+  	});
+  </script>
+</html>
