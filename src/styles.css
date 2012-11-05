@@ -600,3 +600,38 @@
 .profile_addToFavorite:hover {
 	background-color: #B7EDEA;
 }
+
+
+
+/**
+ * Advanced Search
+ */
+.advancedSearchForm {
+	border: solid black 1px;
+	width: 800px;
+	height: 750px;
+	border-radius: 30px;
+	margin-top: 30px;
+	padding: 30px;
+}
+.advancedSearchForm_content * {
+	font-size: 30px;
+}
+.advancedSearchForm h1 {
+	margin: 0px;
+	text-align: center;
+	font-size: 50px;
+}
+.advancedSearch_left {
+	float: left;
+}
+.advancedSearch_right {
+	position: absolute;
+	left: 350px;
+}
+.advancedSearchForm button {
+	position: absolute;
+	font-size: 50px;
+	top: 765px;
+	left: 380px;
+}
