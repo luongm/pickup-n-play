@@ -4,6 +4,7 @@ goog.require('goog.dom');
 goog.require('goog.events');
 goog.require('goog.math');
 goog.require('goog.string');
+goog.require('goog.net.Cookies');
 
 // users = 
 users = {"Minh Luong" : ["male", ]}
@@ -17,6 +18,10 @@ var hiddenGamePosts = [];
 var filterTabs = [];
 var activeFilters = [];
 var favorites = [];
+var db = window.openDatabase('mydb', '1.0', 'Test DB', 1024);
+db.transaction(function (tx) {  
+   tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
+});
 
 function onLoad() {
 	if (document.getElementById('filterBar')) {
@@ -150,4 +155,65 @@ function minhProfileOnLoad() {
 
 function handleMinhAddToFavorites(e) {
 	favorites.push("Minh Luong");
+}
+
+function handleAdvancedSearch() {
+	document.getElementById('advancedSearchMaaan').style.display = 'none';
+	var gameSearchBoxInput = document.getElementById('sport-name').value;
+	var startTime = document.getElementById('start-time').value;
+	var duration = document.getElementById('duration').value;
+	var locationSearchBoxInput = document.getElementById('location').value;
+	var gamePosts = goog.dom.getElementsByClass('gamePost');
+	for (var i=0; i< gamePosts.length; i++) {
+		hiddenGamePosts.push(gamePosts[i]);
+	}
+	
+	var sportsChange = false;
+	var locationChange = false;
+	
+	if (gameSearchBoxInput != "") {
+		// Hide all the posts that are not the same sport as inputted.
+		for (var i=0; i<gamePosts.length; i++) {
+			// Hide the event post if the location doesn't match the search field.
+			var gameText = gamePosts[i].children[1].children[1].children[0].textContent;
+			if(!goog.string.caseInsensitiveCompare(gameText, gameSearchBoxInput)) {
+				gamePosts[i].style.display = "block";
+				goog.array.remove(hiddenGamePosts, gamePosts[i]);
+				if (!sportsChange) {
+					sportsChange = true;
+				}
+			}
+		}
+		// Update the filter bar.
+		if (sportsChange) {
+			activeFilters.push(gameSearchBoxInput);
+			createAndAppendFilterTab(gameSearchBoxInput);
+			if (activeFilters.length > 0) {
+				document.getElementById('filterBar').style.display = "block";
+			}
+		}
+	}
+	
+	if (locationSearchBoxInput != "") {
+		// Hide all the posts that are not in the same location as the location search box field.
+		for (var i=0; i<gamePosts.length; i++) {
+			// Hide the event post if the location doesn't match the search field.
+			var locationText = gamePosts[i].children[1].children[1].children[1].textContent.substring(2);
+			if (!goog.string.caseInsensitiveCompare(locationText, locationSearchBoxInput)) {
+				gamePosts[i].style.display = "block";
+				goog.array.remove(hiddenGamePosts, gamePosts[i]);
+				if (!locationChange) {
+					locationChange = true;
+				}
+			}
+		}
+		// Update the filter bar.
+		if (locationChange) {
+			activeFilters.push(locationSearchBoxInput);
+			createAndAppendFilterTab(locationSearchBoxInput);
+			if (activeFilters.length > 0) {
+				document.getElementById('filterBar').style.display = "block";
+			}
+		}
+	}
 }

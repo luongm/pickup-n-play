@@ -79,7 +79,7 @@
 
       <!--MAIN CONTENT HTML-->
       <div class="mainContentWrapper">
-        <div class="advancedSearchForm">
+        <div id="advancedSearchMaaan" class="advancedSearchForm">
           <h1>Advanced search</h1>
           
           <div class="advancedSearchForm_content">
@@ -123,7 +123,7 @@
         
             <p>
               <div class="advancedSearch_left">Intensity level</div>
-              <select name="skill-level" id="skill-level" class="advancedSearch_right">
+              <select name="skill-level" id="itensity-level" class="advancedSearch_right">
                 <option value="0">Any</option>
                 <option value="1">Very Little</option>
                 <option value="2">Little</option>
@@ -145,15 +145,142 @@
               </select>
             </p><br>
         
-            <p>
+           <!-- <p>
               <div class="advancedSearch_left">Including people</div>
-              <textarea class="advancedSearch_right" rows="4" cols="25" placeholder="Sumedh Sawant"></textarea>
-            </p><br>
+              <textarea id="includingPeople" class="advancedSearch_right" rows="4" cols="25" placeholder="Sumedh Sawant"></textarea>
+            </p><br> -->
             
-            <button onclick="window.open('result.html', '_self');">Search</button>
+            <button onclick="handleAdvancedSearch()">Search</button>
           </div>
         </div>
-      </div>
+      
+				<div id="filterBar" class="filterBar">
+					<div style="position: relative; bottom: 19px; left: 4px; display: inline-block"><h4>Filtered By (Click to Remove):</h4></div>
+				</div>
+				 <!-- Game Post #1 -->
+	        <div class="gamePost" style="display: none">
+	          <div class="gamePost_header">
+	            <div class="gamePost_user">
+	              <div class="gamePost_user_pic"></div>
+	              <div class="gamePost_user_name" onclick="window.open('sumedhprofile.html', '_self')">
+	                <p>Sumedh Sawant</p>
+	              </div>
+	            </div>
+	            <div class="gamePost_messageBubble">
+	              <p>Join Me!</p>
+	            </div>
+	            <div class="gamePost_details">
+	              <p>Details</p>
+	            </div>
+	          </div>
+
+	          <div class="gamePost_content">
+	            <div class="gamePost_sportPic">
+	              <img src="images/basketball_court.gif">
+	            </div>
+	            <div class="gamePost_info">
+	              <div class="gamePost_sportName">Basketball</div>
+	              <div id="gamePostLocation1" class="gamePost_location">@ RSF</div>
+	              <div class="gamePost_time">2:00 - 3:00 pm</div>
+	              <div class="gamePost_socialInfo">3 likes | 12 comments</div>
+	            </div>
+	          </div>
+
+	          <div class="gamePost_bottomBar">
+	            <div class="gamePost_postedTime">
+	              Posted 20 seconds ago
+	            </div>
+	            <div class="gamePost_actions">
+	              <text onclick="alert('Liking...')">Like</text> |
+	              <text onclick="alert('Commenting...')">Comment</text> |
+	              <text onclick="alert('Sharing...')">Share</text>
+	            </div>
+	          </div>
+	        </div>
+
+	        <!-- Game Post #2 -->
+	        <div class="gamePost" style="display: none">
+	          <div class="gamePost_header">
+	            <div class="gamePost_user">
+	              <div class="gamePost_user_pic"></div>
+	              <div class="gamePost_user_name" onclick="window.open('walterprofile.html', '_self')">
+	                <p>Walter White</p>
+	              </div>
+	            </div>
+	            <div class="gamePost_messageBubble">
+	              <p>Join Me!</p>
+	            </div>
+	            <div class="gamePost_details">
+	              <p>Details</p>
+	            </div>
+	          </div>
+
+	          <div class="gamePost_content">
+	            <div class="gamePost_sportPic">
+	              <img src="images/football_field.gif">
+	            </div>
+	            <div class="gamePost_info">
+	              <div class="gamePost_sportName">Football</div>
+	              <div id="gamePostLocation2" class="gamePost_location">@ RSF</div>
+	              <div class="gamePost_time">7:00 - 8:00 pm</div>
+	              <div class="gamePost_socialInfo">9 likes | 2 comments</div>
+	            </div>
+	          </div>
+
+	          <div class="gamePost_bottomBar">
+	            <div class="gamePost_postedTime">
+	              Posted 13 minutes ago
+	            </div>
+	            <div class="gamePost_actions">
+	              <text onclick="alert('Liking...')">Like</text> |
+	              <text onclick="alert('Commenting...')">Comment</text> |
+	              <text onclick="alert('Sharing...')">Share</text>
+	            </div>
+	          </div>
+	        </div>
+
+
+	        <!-- Game Post #3 -->
+	        <div class="gamePost" style="display: none">
+	          <div class="gamePost_header">
+	            <div class="gamePost_user">
+	              <div class="gamePost_user_pic"></div>
+	              <div class="gamePost_user_name" onclick="window.open('minhprofile.html', '_self')">
+	                <p>Minh Luong</p>
+	              </div>
+	            </div>
+	            <div class="gamePost_messageBubble">
+	              <p>Join Me!</p>
+	            </div>
+	            <div class="gamePost_details">
+	              <p>Details</p>
+	            </div>
+	          </div>
+
+	          <div class="gamePost_content">
+	            <div class="gamePost_sportPic">
+	              <img src="images/tennis_court.jpeg">
+	            </div>
+	            <div class="gamePost_info">
+	              <div class="gamePost_sportName">Tennis</div>
+	              <div id="gamePostLocation3" class="gamePost_location">@ Hearst Parking Structure</div>
+	              <div class="gamePost_time">5:00 - 7:00 pm</div>
+	              <div class="gamePost_socialInfo">11 likes | 25 comments</div>
+	            </div>
+	          </div>
+
+	          <div class="gamePost_bottomBar">
+	            <div class="gamePost_postedTime">
+	              Posted 36 minutes ago
+	            </div>
+	            <div class="gamePost_actions">
+	              <text onclick="alert('Liking...')">Like</text> |
+	              <text onclick="alert('Commenting...')">Comment</text> |
+	              <text onclick="alert('Sharing...')">Share</text>
+	            </div>
+	          </div>
+	        </div>
+			</div>
     </div>
   </body>
 </html>
