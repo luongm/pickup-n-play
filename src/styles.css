@@ -353,6 +353,7 @@
 	width: 300px;
 	height: 50px;
 	margin: 25px;
+	border-radius: 10px;
 	background-color: #FAFF97;
 }
 .gamePost_user:hover {
@@ -372,6 +373,16 @@
 	position: relative;
 	margin: 10px;
 	font-size: 30px;
+  color: blue;
+}
+.gamePost_user_name a:link {
+  text-decoration: none;
+}
+.gamePost_user_name a:hover {
+  text-decoration: underline;
+}
+.gamePost_user_name a:visited {
+  color: inherit;
 }
 
 .gamePost_messageBubble {
@@ -381,11 +392,14 @@
 	float: left;
 	margin-top: 30px;
 	margin-left: -20px;
-	background-image: url('images/message_bubble.png');
+	background-image: url('images/message_bubble0.png');
 	background-size: 200px 50px;
 }
 .gamePost_messageBubble:hover {
-	background-image: url('images/message_bubble_hovered.png');
+  background-image: url('images/message_bubble1.png');
+}
+.gamePost_messageBubble:active {
+	background-image: url('images/message_bubble2.png');
 }
 .gamePost_messageBubble p {
 	position: relative;
@@ -404,10 +418,14 @@
 	height: 50px;
 	margin-right: 67px;
 	margin-top: 25px;
-	background-color: #62F83F;
+	border-radius: 10px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#81f965), to(#defed6));
 }
 .gamePost_details:hover {
-	background-color: #51CD29;
+	background: -webkit-gradient(linear, left top, left bottom, from(#43f719), to(#a0fb8b));
+}
+.gamePost_details:active {
+	background: -webkit-gradient(linear, left top, left bottom, from(#81f965), to(#31e008));
 }
 .gamePost_details p {
 	position: relative;
@@ -565,6 +583,14 @@
 	color: red;
 	font-size: 25px;
 	font-weight: bold;
+	border-radius: 10px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f8e367), to(#fdf8d8));
+}
+.profile_performanceTableCell_challenge:hover {
+	background: -webkit-gradient(linear, left top, left bottom, from(#f6dc42), to(#faea8d));
+}
+.profile_performanceTableCell_challenge:active {
+	background: -webkit-gradient(linear, left top, left bottom, from(#faea8d), to(#f4d51d));
 }
 
 .profile_social {
@@ -598,7 +624,10 @@
 	margin-top: 25px;
 }
 .profile_addToFavorite:hover {
-	background-color: #B7EDEA;
+	background-color: #b7edea;
+}
+.profile_addToFavorite:active {
+	background-color: #78ddd8;
 }
 
 

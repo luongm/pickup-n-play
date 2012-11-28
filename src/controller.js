@@ -6,6 +6,12 @@ goog.require('goog.math');
 goog.require('goog.string');
 goog.require('goog.net.Cookies');
 
+// import jquery
+var script = document.createElement('script');
+script.src = 'http://code.jquery.com/jquery-latest.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+
 // users = 
 users = {"Minh Luong" : ["male", ]}
 
@@ -27,6 +33,13 @@ function onLoad() {
 	if (document.getElementById('filterBar')) {
 		document.getElementById('filterBar').style.display = "none";
 	}
+	$(".gamePost_messageBubble p").click(function() {
+		if ($(this).html() == "Join Me!") {
+			$(this).html("Joined!");
+		} else {
+			$(this).html("Join Me!");
+		}
+	});
 }
 
 function createGamePost(parent, postId) {
